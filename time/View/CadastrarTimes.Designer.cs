@@ -35,10 +35,13 @@ namespace time.View
             this.label3 = new System.Windows.Forms.Label();
             this.tbxNomeTime = new System.Windows.Forms.TextBox();
             this.tbxFraseTime = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCadastrarTime = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnImagem = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,14 +95,14 @@ namespace time.View
             this.tbxFraseTime.Size = new System.Drawing.Size(278, 33);
             this.tbxFraseTime.TabIndex = 4;
             // 
-            // pictureBox1
+            // pictureBoxLogo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(154, 441);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 116);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(154, 441);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(140, 116);
+            this.pictureBoxLogo.TabIndex = 5;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // label4
             // 
@@ -122,15 +125,42 @@ namespace time.View
             this.btnCadastrarTime.UseVisualStyleBackColor = true;
             this.btnCadastrarTime.Click += new System.EventHandler(this.btnCadastrarTime_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(335, 497);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(97, 31);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnImagem
+            // 
+            this.btnImagem.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImagem.Location = new System.Drawing.Point(154, 564);
+            this.btnImagem.Name = "btnImagem";
+            this.btnImagem.Size = new System.Drawing.Size(140, 30);
+            this.btnImagem.TabIndex = 9;
+            this.btnImagem.Text = "Buscar Imagem";
+            this.btnImagem.UseVisualStyleBackColor = true;
+            this.btnImagem.Click += new System.EventHandler(this.btnImagem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // CadastrarTimes
             // 
             this.AcceptButton = this.btnCadastrarTime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 630);
+            this.ClientSize = new System.Drawing.Size(595, 630);
+            this.Controls.Add(this.btnImagem);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrarTime);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.tbxFraseTime);
             this.Controls.Add(this.tbxNomeTime);
             this.Controls.Add(this.label3);
@@ -145,7 +175,7 @@ namespace time.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gerenciamento de Jogos";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CadastrarTimes_KeyPress);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +188,11 @@ namespace time.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxNomeTime;
         private System.Windows.Forms.TextBox tbxFraseTime;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCadastrarTime;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnImagem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

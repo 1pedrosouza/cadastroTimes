@@ -20,7 +20,7 @@ namespace time.View
 
         private void jogadoresToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //aqui é o pesquisar da aba jogardores 
+           //aqui é a aba de perquisar Jogadores
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -38,6 +38,12 @@ namespace time.View
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pesquisarTimesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarTimes telaPesquisarTime = new TelaPesquisarTimes();
+            telaPesquisarTime.ShowDialog();
         }
     }
 }

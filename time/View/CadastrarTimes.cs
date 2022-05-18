@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,9 @@ namespace time.View
 
         Times.NomeTimee = tbxNomeTime.Text;
         Times.FraseTimes = tbxFraseTime.Text;
-        Times.LogoTimes = "c:/";  //bagui das logo tem que fazer
+        MemoryStream memoryLogo = new MemoryStream();
+        pictureBoxLogo.Image.Save(memoryLogo, pictureBoxLogo.Image.RawFormat);
+            Times.LogoTimes = memoryLogo.ToArray();
 
             ManipulaTimes manipulaTimes = new ManipulaTimes();
             manipulaTimes.cadastroTimes();
@@ -76,6 +79,22 @@ namespace time.View
             {
                 fecharCadastro();
             }
+        }
+
+        private void btnImagem_Click(object sender, EventArgs e)
+        {
+            
+            openFileDialog1.Filter = "Escolha seu logo (*.png; *.jpeg; *.jpg;) | *.png; *.jpeg; *.jpg;";
+
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxLogo.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

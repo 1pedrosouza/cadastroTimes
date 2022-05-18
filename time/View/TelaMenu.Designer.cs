@@ -32,13 +32,14 @@ namespace time.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarTimesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,13 @@ namespace time.View
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -75,21 +83,22 @@ namespace time.View
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // jogadoresToolStripMenuItem1
             // 
             this.jogadoresToolStripMenuItem1.Name = "jogadoresToolStripMenuItem1";
-            this.jogadoresToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.jogadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.jogadoresToolStripMenuItem1.Text = "Pesquisar";
             this.jogadoresToolStripMenuItem1.Click += new System.EventHandler(this.jogadoresToolStripMenuItem1_Click);
             // 
             // timesToolStripMenuItem
             // 
             this.timesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem1});
+            this.cadastrarToolStripMenuItem1,
+            this.pesquisarTimesToolStripMenuItem});
             this.timesToolStripMenuItem.Name = "timesToolStripMenuItem";
             this.timesToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.timesToolStripMenuItem.Text = "Times";
@@ -97,7 +106,7 @@ namespace time.View
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.cadastrarToolStripMenuItem1.Text = "cadastrar";
             this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
@@ -110,12 +119,12 @@ namespace time.View
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // sairToolStripMenuItem
+            // pesquisarTimesToolStripMenuItem
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            this.pesquisarTimesToolStripMenuItem.Name = "pesquisarTimesToolStripMenuItem";
+            this.pesquisarTimesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarTimesToolStripMenuItem.Text = "Pesquisar Times";
+            this.pesquisarTimesToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTimesToolStripMenuItem_Click);
             // 
             // TelaMenu
             // 
@@ -151,5 +160,6 @@ namespace time.View
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pesquisarTimesToolStripMenuItem;
     }
 }

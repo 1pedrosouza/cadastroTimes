@@ -10,15 +10,17 @@ namespace time.Model
     {
        private static int codTimes;
        private static string nomeTimee;
-       private static string logoTimes;
+       private static Array  logoTimes;
        private static string fraseTimes;
        private static string retorno;
 
 
+
         public static int CodTimes { get => codTimes; set => codTimes = value; }
         public static string NomeTimee { get => nomeTimee; set => nomeTimee = value; }
-        public static string LogoTimes { get => logoTimes; set => logoTimes = value; }
+       
         public static string FraseTimes { get => fraseTimes; set => fraseTimes = value; }
         public static string Retorno { get => retorno; set => retorno = value; }
+        public static Array LogoTimes { get => logoTimes; set => logoTimes = value; }
     }
 }
