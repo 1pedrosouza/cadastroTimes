@@ -20,7 +20,9 @@ namespace time.View
 
         private void jogadoresToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           //aqui é a aba de perquisar Jogadores
+            TelaPesquisarJogador telaPesquisar = new TelaPesquisarJogador();
+            telaPesquisar.ShowDialog();
+           
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)

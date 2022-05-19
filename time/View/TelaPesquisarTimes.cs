@@ -55,5 +55,12 @@ namespace time.View
                 throw;
             }
         }
+
+        private void tbxBuscarCodigoJogador_TextChanged(object sender, EventArgs e)
+        {
+           //
+        }
+
+       
     }
 }

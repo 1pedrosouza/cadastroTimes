@@ -25,7 +25,7 @@ namespace time.View
             Jogadores.FoneJogadores = tbxFoneJogadores.Text;
 
             ManipulaJogadores manipulaJogadores = new ManipulaJogadores();
-            manipulaJogadores.cadastroJogadores();
+            manipulaJogadores.CadastroJogadores();
 
             if(Jogadores.Retorno == "Sim")
             {

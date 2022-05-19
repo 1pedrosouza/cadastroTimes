@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using time.Model;
@@ -14,7 +10,7 @@ namespace time.Model
 {
     class ManipulaJogadores
     {
-        public void cadastroJogadores()
+        public void CadastroJogadores()
         {
             SqlConnection cn = new SqlConnection(ConexaoBD.conectar());
             SqlCommand cmd = new SqlCommand("pInserirJogadores", cn);
@@ -53,5 +49,44 @@ namespace time.Model
 
 
         }
+        public void PesquisarCodigoJogadores()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBD.conectar());
+            SqlCommand cmd = new SqlCommand("pBuscarCodigoJogadores", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@CodJogadores", Jogadores.CodJogadores);
+                cn.Open();
+                MessageBox.Show("Test");
+                var arrayDados = cmd.ExecuteReader();
+
+                if (arrayDados.Read())
+                {
+                    Jogadores.CodJogadores = Convert.ToInt32(arrayDados["CodJogadores"]);
+                    Jogadores.NomeJogadores = arrayDados["NomeJogadores"].ToString();
+                    Jogadores.EmailJogadores = arrayDados["EmailJogadores"].ToString();
+                    Jogadores.FoneJogadores = arrayDados["FoneJogadores"].ToString();
+                    Jogadores.Retorno = "Sim";
+                }
+                else
+                {
+                    MessageBox.Show("código não localizado", "Atenção",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Jogadores.Retorno = "Não";
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+
     }
 }

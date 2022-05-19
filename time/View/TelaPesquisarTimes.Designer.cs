@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace time.View
 {
     partial class TelaPesquisarTimes
@@ -46,10 +48,24 @@ namespace time.View
             this.label1 = new System.Windows.Forms.Label();
             this.tbxCodigoTime = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnBuscarJogador = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbxBuscarCodigoJogador = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxFone = new System.Windows.Forms.TextBox();
+            this.lblCodigoJogadoresAtual = new System.Windows.Forms.Label();
+            this.btnEditarJogador = new System.Windows.Forms.Button();
+            this.BtnXJogador = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxEmailJogador = new System.Windows.Forms.TextBox();
+            this.tbxNomeJogador = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -211,6 +227,19 @@ namespace time.View
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnBuscarJogador);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.tbxBuscarCodigoJogador);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.tbxFone);
+            this.tabPage2.Controls.Add(this.lblCodigoJogadoresAtual);
+            this.tabPage2.Controls.Add(this.btnEditarJogador);
+            this.tabPage2.Controls.Add(this.BtnXJogador);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.tbxEmailJogador);
+            this.tabPage2.Controls.Add(this.tbxNomeJogador);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -218,6 +247,132 @@ namespace time.View
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisar por Time";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarJogador
+            // 
+            this.btnBuscarJogador.Location = new System.Drawing.Point(379, 26);
+            this.btnBuscarJogador.Name = "btnBuscarJogador";
+            this.btnBuscarJogador.Size = new System.Drawing.Size(67, 27);
+            this.btnBuscarJogador.TabIndex = 26;
+            this.btnBuscarJogador.Text = "Buscar";
+            this.btnBuscarJogador.UseVisualStyleBackColor = true;
+            this.btnBuscarJogador.Click += new System.EventHandler(this.btnBuscarJogador_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(50, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(212, 21);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Digite o código do Jogador";
+            // 
+            // tbxBuscarCodigoJogador
+            // 
+            this.tbxBuscarCodigoJogador.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxBuscarCodigoJogador.Location = new System.Drawing.Point(268, 22);
+            this.tbxBuscarCodigoJogador.Name = "tbxBuscarCodigoJogador";
+            this.tbxBuscarCodigoJogador.Size = new System.Drawing.Size(96, 33);
+            this.tbxBuscarCodigoJogador.TabIndex = 25;
+            this.tbxBuscarCodigoJogador.TextChanged += new System.EventHandler(this.tbxBuscarCodigoJogador_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(50, 245);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 21);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Telefone:";
+            // 
+            // tbxFone
+            // 
+            this.tbxFone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxFone.Location = new System.Drawing.Point(133, 242);
+            this.tbxFone.Name = "tbxFone";
+            this.tbxFone.Size = new System.Drawing.Size(170, 29);
+            this.tbxFone.TabIndex = 22;
+            // 
+            // lblCodigoJogadoresAtual
+            // 
+            this.lblCodigoJogadoresAtual.AutoSize = true;
+            this.lblCodigoJogadoresAtual.BackColor = System.Drawing.Color.Gray;
+            this.lblCodigoJogadoresAtual.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCodigoJogadoresAtual.Location = new System.Drawing.Point(133, 116);
+            this.lblCodigoJogadoresAtual.Name = "lblCodigoJogadoresAtual";
+            this.lblCodigoJogadoresAtual.Size = new System.Drawing.Size(52, 25);
+            this.lblCodigoJogadoresAtual.TabIndex = 21;
+            this.lblCodigoJogadoresAtual.Text = "..........";
+            // 
+            // btnEditarJogador
+            // 
+            this.btnEditarJogador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarJogador.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarJogador.Image = global::time.Properties.Resources.edit_modify_icon_149489;
+            this.btnEditarJogador.Location = new System.Drawing.Point(523, 300);
+            this.btnEditarJogador.Name = "btnEditarJogador";
+            this.btnEditarJogador.Size = new System.Drawing.Size(75, 57);
+            this.btnEditarJogador.TabIndex = 20;
+            this.btnEditarJogador.UseVisualStyleBackColor = true;
+            // 
+            // BtnXJogador
+            // 
+            this.BtnXJogador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnXJogador.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnXJogador.Image = global::time.Properties.Resources.icons8_circled_x_48;
+            this.BtnXJogador.Location = new System.Drawing.Point(428, 300);
+            this.BtnXJogador.Name = "BtnXJogador";
+            this.BtnXJogador.Size = new System.Drawing.Size(75, 57);
+            this.BtnXJogador.TabIndex = 19;
+            this.BtnXJogador.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(50, 120);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 21);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Código:";
+            // 
+            // tbxEmailJogador
+            // 
+            this.tbxEmailJogador.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxEmailJogador.Location = new System.Drawing.Point(133, 196);
+            this.tbxEmailJogador.Name = "tbxEmailJogador";
+            this.tbxEmailJogador.Size = new System.Drawing.Size(344, 29);
+            this.tbxEmailJogador.TabIndex = 17;
+            // 
+            // tbxNomeJogador
+            // 
+            this.tbxNomeJogador.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxNomeJogador.Location = new System.Drawing.Point(133, 152);
+            this.tbxNomeJogador.Name = "tbxNomeJogador";
+            this.tbxNomeJogador.Size = new System.Drawing.Size(344, 29);
+            this.tbxNomeJogador.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(50, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 21);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "E-mail:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(50, 155);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 21);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Nome:";
             // 
             // TelaPesquisarTimes
             // 
@@ -236,8 +391,15 @@ namespace time.View
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void btnBuscarJogador_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -258,5 +420,18 @@ namespace time.View
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.TextBox tbxFraseTime;
         private System.Windows.Forms.Label lblCodigoTimeAtual;
+        private System.Windows.Forms.Button btnBuscarJogador;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbxBuscarCodigoJogador;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxFone;
+        private System.Windows.Forms.Label lblCodigoJogadoresAtual;
+        private System.Windows.Forms.Button btnEditarJogador;
+        private System.Windows.Forms.Button BtnXJogador;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbxEmailJogador;
+        private System.Windows.Forms.TextBox tbxNomeJogador;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
