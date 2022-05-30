@@ -37,7 +37,7 @@ namespace time.View
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblCodigoTimeAtual = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.BtnX = new System.Windows.Forms.Button();
+            this.btnDeletarTime = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.tbxFraseTime = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@ namespace time.View
             this.label1 = new System.Windows.Forms.Label();
             this.tbxCodigoTime = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnBuscarJogador = new System.Windows.Forms.Button();
+            this.btnBuscarCodigoJogadores = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tbxBuscarCodigoJogador = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,6 +61,8 @@ namespace time.View
             this.tbxNomeJogador = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnAlterarLogo = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -94,9 +96,10 @@ namespace time.View
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAlterarLogo);
             this.groupBox1.Controls.Add(this.lblCodigoTimeAtual);
             this.groupBox1.Controls.Add(this.btnEditar);
-            this.groupBox1.Controls.Add(this.BtnX);
+            this.groupBox1.Controls.Add(this.btnDeletarTime);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pictureBoxLogo);
             this.groupBox1.Controls.Add(this.tbxFraseTime);
@@ -126,22 +129,24 @@ namespace time.View
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditar.Image = global::time.Properties.Resources.edit_modify_icon_149489;
-            this.btnEditar.Location = new System.Drawing.Point(497, 199);
+            this.btnEditar.Location = new System.Drawing.Point(503, 209);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 57);
+            this.btnEditar.Size = new System.Drawing.Size(51, 47);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // BtnX
+            // btnDeletarTime
             // 
-            this.BtnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnX.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnX.Image = global::time.Properties.Resources.icons8_circled_x_48;
-            this.BtnX.Location = new System.Drawing.Point(402, 199);
-            this.BtnX.Name = "BtnX";
-            this.BtnX.Size = new System.Drawing.Size(75, 57);
-            this.BtnX.TabIndex = 9;
-            this.BtnX.UseVisualStyleBackColor = true;
+            this.btnDeletarTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletarTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDeletarTime.Image = global::time.Properties.Resources.icons8_circled_x_48;
+            this.btnDeletarTime.Location = new System.Drawing.Point(402, 209);
+            this.btnDeletarTime.Name = "btnDeletarTime";
+            this.btnDeletarTime.Size = new System.Drawing.Size(64, 47);
+            this.btnDeletarTime.TabIndex = 9;
+            this.btnDeletarTime.UseVisualStyleBackColor = true;
+            this.btnDeletarTime.Click += new System.EventHandler(this.btnDeletarTime_Click);
             // 
             // label2
             // 
@@ -155,7 +160,7 @@ namespace time.View
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Location = new System.Drawing.Point(402, 35);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(402, 19);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(170, 158);
             this.pictureBoxLogo.TabIndex = 6;
@@ -227,7 +232,7 @@ namespace time.View
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnBuscarJogador);
+            this.tabPage2.Controls.Add(this.btnBuscarCodigoJogadores);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.tbxBuscarCodigoJogador);
             this.tabPage2.Controls.Add(this.label5);
@@ -248,15 +253,15 @@ namespace time.View
             this.tabPage2.Text = "Pesquisar por Time";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnBuscarJogador
+            // btnBuscarCodigoJogadores
             // 
-            this.btnBuscarJogador.Location = new System.Drawing.Point(379, 26);
-            this.btnBuscarJogador.Name = "btnBuscarJogador";
-            this.btnBuscarJogador.Size = new System.Drawing.Size(67, 27);
-            this.btnBuscarJogador.TabIndex = 26;
-            this.btnBuscarJogador.Text = "Buscar";
-            this.btnBuscarJogador.UseVisualStyleBackColor = true;
-            this.btnBuscarJogador.Click += new System.EventHandler(this.btnBuscarJogador_Click);
+            this.btnBuscarCodigoJogadores.Location = new System.Drawing.Point(428, 24);
+            this.btnBuscarCodigoJogadores.Name = "btnBuscarCodigoJogadores";
+            this.btnBuscarCodigoJogadores.Size = new System.Drawing.Size(87, 31);
+            this.btnBuscarCodigoJogadores.TabIndex = 26;
+            this.btnBuscarCodigoJogadores.Text = "Buscar";
+            this.btnBuscarCodigoJogadores.UseVisualStyleBackColor = true;
+            this.btnBuscarCodigoJogadores.Click += new System.EventHandler(this.btnBuscarCodigoJogadores_Click);
             // 
             // label9
             // 
@@ -374,6 +379,20 @@ namespace time.View
             this.label8.TabIndex = 14;
             this.label8.Text = "Nome:";
             // 
+            // btnAlterarLogo
+            // 
+            this.btnAlterarLogo.Location = new System.Drawing.Point(418, 183);
+            this.btnAlterarLogo.Name = "btnAlterarLogo";
+            this.btnAlterarLogo.Size = new System.Drawing.Size(136, 20);
+            this.btnAlterarLogo.TabIndex = 12;
+            this.btnAlterarLogo.Text = "Alterar Imagem";
+            this.btnAlterarLogo.UseVisualStyleBackColor = true;
+            this.btnAlterarLogo.Click += new System.EventHandler(this.btnAlterarLogo_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // TelaPesquisarTimes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -415,12 +434,11 @@ namespace time.View
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button BtnX;
+        private System.Windows.Forms.Button btnDeletarTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.TextBox tbxFraseTime;
         private System.Windows.Forms.Label lblCodigoTimeAtual;
-        private System.Windows.Forms.Button btnBuscarJogador;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbxBuscarCodigoJogador;
         private System.Windows.Forms.Label label5;
@@ -433,5 +451,8 @@ namespace time.View
         private System.Windows.Forms.TextBox tbxNomeJogador;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnBuscarCodigoJogadores;
+        private System.Windows.Forms.Button btnAlterarLogo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

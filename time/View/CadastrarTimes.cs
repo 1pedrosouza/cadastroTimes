@@ -24,7 +24,7 @@ namespace time.View
         {
             if(tbxNomeTime.Text == "" || tbxFraseTime.Text == "")
             {
-                MessageBox.Show("escreva uma parada ai irmão", "Atenção",
+                MessageBox.Show("escreva um código válido", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
 

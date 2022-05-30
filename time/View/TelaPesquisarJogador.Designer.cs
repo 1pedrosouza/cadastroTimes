@@ -45,7 +45,6 @@ namespace time.View
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +61,6 @@ namespace time.View
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btnBuscarJogador);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.tbxBuscarCodigoJogador);
@@ -151,6 +149,7 @@ namespace time.View
             this.btnEditarJogador.Size = new System.Drawing.Size(75, 57);
             this.btnEditarJogador.TabIndex = 33;
             this.btnEditarJogador.UseVisualStyleBackColor = true;
+            this.btnEditarJogador.Click += new System.EventHandler(this.btnEditarJogador_Click);
             // 
             // BtnXJogador
             // 
@@ -161,7 +160,8 @@ namespace time.View
             this.BtnXJogador.Name = "BtnXJogador";
             this.BtnXJogador.Size = new System.Drawing.Size(75, 57);
             this.BtnXJogador.TabIndex = 32;
-            this.BtnXJogador.UseVisualStyleBackColor = true;   
+            this.BtnXJogador.UseVisualStyleBackColor = true;
+            this.BtnXJogador.Click += new System.EventHandler(this.BtnXJogador_Click);
             // 
             // label6
             // 
@@ -219,16 +219,6 @@ namespace time.View
             this.tabPage2.Text = "Pesquisar por Time";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(501, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-
-            // 
             // TelaPesquisarJogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -262,6 +252,5 @@ namespace time.View
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
     }
 }

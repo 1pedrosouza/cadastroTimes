@@ -38,8 +38,8 @@ namespace time.View
             this.jogadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pesquisarTimesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,14 +83,14 @@ namespace time.View
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // jogadoresToolStripMenuItem1
             // 
             this.jogadoresToolStripMenuItem1.Name = "jogadoresToolStripMenuItem1";
-            this.jogadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.jogadoresToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.jogadoresToolStripMenuItem1.Text = "Pesquisar";
             this.jogadoresToolStripMenuItem1.Click += new System.EventHandler(this.jogadoresToolStripMenuItem1_Click);
             // 
@@ -106,33 +106,33 @@ namespace time.View
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.cadastrarToolStripMenuItem1.Text = "cadastrar";
             this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-228, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1066, 611);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // pesquisarTimesToolStripMenuItem
             // 
             this.pesquisarTimesToolStripMenuItem.Name = "pesquisarTimesToolStripMenuItem";
-            this.pesquisarTimesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarTimesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.pesquisarTimesToolStripMenuItem.Text = "Pesquisar Times";
             this.pesquisarTimesToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTimesToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-221, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1066, 410);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // TelaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
